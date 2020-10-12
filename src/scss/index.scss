@@ -1,0 +1,153 @@
+
+
+
+// Bootstrap theme setting change 
+// $gradient_1 and $gradient_2 are variable from gulp file
+
+$theme-colors: (
+    "primary": #0074d9,
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+section{
+    padding: 4.5rem 0;
+  }
+  
+  .main-banner{
+    position: relative;
+    height: 100vh;  
+  }
+  
+  .background-gradient__half,
+  .background-gradient__full{
+    position: relative;
+  }
+
+  .background-gradient__full{
+    background: $gradient_1;
+    background: linear-gradient(90deg, $gradient_1  0%, $gradient_2 100%);
+  }
+  
+  
+  .background-gradient__half:before{
+    top:0;
+    height: 50%;
+    content: "";
+    width: 100%;
+    position: absolute;
+    background: $gradient_1;
+    background: linear-gradient(90deg, $gradient_1  0%, $gradient_2 100%);
+  }
+  
+  .d-table{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .d-table-cell{
+    vertical-align: middle;
+  }
+  
+  .btn-lg.button-cricle{
+      border-radius: 30px;
+  }
+  
+
+  
+  .section-title h2{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: bold;
+  
+    
+    &:after{
+      position: absolute;
+      width:80px;
+      height:5px;
+      bottom:-15px;
+      left:0;
+      background:#000;
+      border-radius: 10px;
+      content: "";
+  }
+}
+  
+  .section-title.text-light h2:after{
+    background:#fff;
+  }
+  
+  .arrow-cricle{
+    display: block;
+      width: 65px;
+      height: 65px;
+      border:1px solid #007bff!important;
+      border-radius: 100%;
+
+      &:after{
+        content: ">";
+        width: 65px;
+        height: 65px;
+        position: absolute;
+        vertical-align: middle;
+        color: #007bff;
+        font-size: 14px;
+        text-align: center;
+        top: 50%;
+      
+      }
+  }
+  
+  
+  
+  
+  [data-theme="dark"] {
+    background-color: #111 !important;
+    color: #eee;
+
+     .text-light {
+        color: #333!important;
+      }
+      
+       .section-title h2:after{
+        background-color: #fff !important;  
+      }
+      
+       .btn-outline-light {
+        color: #333;
+        border-color: #333;
+      }
+      
+       .section-title.text-light h2:after{
+        background-color: #111 !important;
+      }
+      
+       .card{
+        color: #333;
+      }
+      
+       .bg-light {
+        background-color: #333 !important;
+      }
+      
+       .bg-white {
+        background-color: #000 !important;
+      }
+      
+       .bg-black {
+        background-color: #eee !important;
+      }
+    
+       .arrow-cricle{
+        border:1px solid #ffff00!important;
+      }
+    
+       .arrow-cricle:after{
+        color: #ffff00;
+      }
+  }
+  
+  
